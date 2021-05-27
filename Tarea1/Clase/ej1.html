@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            function Persona(nombre, twitter) {
+                this.nombre = nombre;
+                this.twitter = twitter;
+            };
+            var objeto = new Persona("Adolfo", "@asanzdiego");
+            console.log(objeto);
+
+            console.log(Object.getPrototypeOf(objeto));
+
+            console.log(objeto.__proto__);
+        </script>
+    </body>
+</html>

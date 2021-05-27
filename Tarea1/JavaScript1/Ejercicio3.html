@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function start(){
+            var dato = document.getElementById('frase').value;
+            var palabras = dato.split(" ");
+            var palindromo = "";
+            var palindromoI = "";
+            var res = "no";
+
+            for(var i=0; i<palabras.length; i++){
+                palindromo += palabras[i];
+            }
+
+            for(var i=palabras.length-1; i>=0; i--){
+                palindromoI += palabras[i];
+            }
+
+            if(palindromo == palindromoI){
+                res = "si";
+            }
+
+            document.getElementById("contenido").innerHTML="La frase es: " + dato + "<br>" +
+            "Tiene: " + palabras.length + " palabras" + "<br>" +
+            "La primer palabra es: " + palabras[0] + "<br>" +
+            "La ultima palabra es: " + palabras[palabras.length - 1] + "<br>" +
+            "Inverso: " + palabras.reverse() + "<br>" +
+            "De la A la Z: " + palabras.sort() + "<br>" +
+            "De la Z la A: " + palabras.sort().reverse() + "<br>" +
+            "La palabra " + res +  " es un palindromo...";
+
+        }
+    </script>
+    <p>Introduce una frase: </p>
+    <input id="frase"/>
+    <button type="button" onclick="start();">Analizar</button>
+    <button type="button">Reiniciar</button>
+    <div id="contenido"></div>
+</body>
+</html>

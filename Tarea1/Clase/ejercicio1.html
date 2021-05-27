@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            function abrir(){
+                var edad = prompt("Introduce una edad:");
+
+                if(Number(edad)==edad){
+                    if(edad >= 18){
+                        document.getElementById("root").innerHTML="Puedes conducir";
+                    }else{
+                        document.getElementById("root").innerHTML="Aun no puedes conducir";
+                    }
+                }else{
+                    alert("Introduce un número válido");
+                }
+            }
+        </script>
+        <button type="button" onclick="abrir();">Revisar Edad</button>
+        <p id="root"></p>
+    </body>
+</html>

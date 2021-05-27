@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+        var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+        var dias = new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado");
+        let d = new Date();
+        document.body.innerHTML = "<h1>Hoy es " + dias[d.getDay()] + ", " + d.getDate() + " de " + meses[d.getMonth()] + " de " + d.getFullYear() + "</h1>" + "<br>" + "<h1>Son las " + d.getHours() + ":" + d.getMinutes() + "</h1>"
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            function ConstructorA(p1) {
+                this.p1 = p1;
+            }
+
+            // los métodos los ponenmos en el prototipo
+            ConstructorA.prototype.metodo1 = function() {
+                console.log(this.p1);
+            };
+            var constructor = new ConstructorA("Hola");
+            constructor.metodo1();
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
