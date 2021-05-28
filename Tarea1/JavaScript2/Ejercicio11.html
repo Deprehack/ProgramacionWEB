@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function Persona(nombre, edad, genero){
+            this.nombre=  nombre;
+            this.edad=    edad;
+            this.genero=  genero;
+            this.metodo1= function obtDetalles(){
+                document.write("Nombre: " + this.nombre + "<br>" + "Edad: " + this.edad + "<br>" + "Género: " + this.genero + "<br>");
+            }; 
+        }
+        var ficha1 = new Persona("Karina","18","femenino");
+        ficha1.metodo1();
+
+        function Estudiante(curso, grupo){
+            this.curso=   curso;
+            this.grupo=   grupo;
+            this.metodo2= function registrar(){
+                document.write("Curso: " + this.curso + "<br>" + "Grupo: " + this.grupo + "<br>");
+            };
+        }
+        var ficha2 = new Estudiante("Programación","Power");
+        ficha2.metodo2();
+
+        function Profesor(asignatura, nivel){
+            this.asignatura=  asignatura;
+            this.nivel=       nivel;
+            this.metodo3=     function asignar(){
+                document.write("Asignatura: " + this.asignatura + "<br>" + "Nivel: " + this.nivel+ "<br>");
+            };
+        }
+        var ficha3 = new Profesor("Html","Básico");
+        ficha3.metodo3();
+
+        var datos=[{nombre: "Grabirl", apellido: "", },{nombre: "Meche"},{nombre: "Oscar"},{nombre: "Fani"}];
+
+        var container=document.getElementById("contenedor");
+        datos.forEach(function(element,index,array){
+            var divContenedor=document.createElement("div");
+            for(var prop in element){
+                var pContenedor = document.createElement("p");
+                pContnedor.innerHTML=prop + ":" + element[prop];
+                divContenedor.appendChild(pContnedor);
+            }
+            container.appendChild(divContenedor)
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
