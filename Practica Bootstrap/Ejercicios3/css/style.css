@@ -1,0 +1,19 @@
+header{
+    background-color: blue;
+    padding: 16px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+.imagen{
+    background-color: #4A366B;
+    height: 180px;
+    width: 286px;
+}
+.inicio{
+    text-align: left;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+}
